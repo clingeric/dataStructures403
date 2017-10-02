@@ -19,9 +19,21 @@ namespace ConsoleApp1
             Console.WriteLine();
 
             userInt = int.Parse(Console.ReadLine());
-            if (userInt == )
-}
-    }
+            switch (userInt)
+            {
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                default:
+                    break;
+
+            }
+
 }
     }
 }
