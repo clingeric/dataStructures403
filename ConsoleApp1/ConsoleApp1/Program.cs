@@ -29,10 +29,27 @@ namespace ConsoleApp1
                     Console.WriteLine("5. Clear Stack");
                     Console.WriteLine("6. Search Stack");
                     Console.WriteLine("7. Return to Main Menu");
+                    Console.WriteLine();
                     break;
                 case 2:
+                    Console.WriteLine("1. Add one time to Queue");
+                    Console.WriteLine("2. Add Huge List of Items to Queue");
+                    Console.WriteLine("3. Display Queue");
+                    Console.WriteLine("4. Delete from Queue");
+                    Console.WriteLine("5. Clear Queue");
+                    Console.WriteLine("6. Search Queue");
+                    Console.WriteLine("7. Return to Main Menu");
+                    Console.WriteLine();
                     break;
                 case 3:
+                    Console.WriteLine("1. Add one item to Dictionary");
+                    Console.WriteLine("2. Add Huge List of Items to Dictionary");
+                    Console.WriteLine("3. Display Dictionary");
+                    Console.WriteLine("4. Delete from Dictionary");
+                    Console.WriteLine("5. Clear Dictionary");
+                    Console.WriteLine("6. Search Dictionary");
+                    Console.WriteLine("7. Return to Main Menu");
+                    Console.WriteLine();
                     break;
                 case 4:
                     break;
