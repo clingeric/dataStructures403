@@ -30,7 +30,7 @@ namespace ConsoleApp1
                     case 1:
                         do
                         {
-                            Console.WriteLine("1. Add one time to Stack");
+                            Console.WriteLine("1. Add one item to Stack");
                             Console.WriteLine("2. Add Huge List of Items to Stack");
                             Console.WriteLine("3. Display Stack");
                             Console.WriteLine("4. Delete from Stack");
@@ -66,7 +66,7 @@ namespace ConsoleApp1
                     case 2:
                         do
                         {
-                            Console.WriteLine("1. Add one time to Queue");
+                            Console.WriteLine("1. Add one item to Queue");
                             Console.WriteLine("2. Add Huge List of Items to Queue");
                             Console.WriteLine("3. Display Queue");
                             Console.WriteLine("4. Delete from Queue");
