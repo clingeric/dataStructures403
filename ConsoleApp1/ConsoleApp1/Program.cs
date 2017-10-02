@@ -12,6 +12,7 @@ namespace ConsoleApp1
         {
             int userInt;
 
+
             Console.WriteLine("1. Stack");
             Console.WriteLine("2. Queue");
             Console.WriteLine("3. Dictionary");
@@ -30,7 +31,14 @@ namespace ConsoleApp1
                     Console.WriteLine("6. Search Stack");
                     Console.WriteLine("7. Return to Main Menu");
                     Console.WriteLine();
+
+                    int userInput;
+
+                    userInput = int.Parse(Console.ReadLine());
+                    switch (userInt\put)
+                        case 1:
                     break;
+                        
                 case 2:
                     Console.WriteLine("1. Add one time to Queue");
                     Console.WriteLine("2. Add Huge List of Items to Queue");
