@@ -22,6 +22,8 @@ namespace ConsoleApp1
             switch (userInt)
             {
                 case 1:
+                    Console.WriteLine("1.Add one time to Stack");
+                    Console.WriteLine("2. Add Huge List of Items to Stack");
                     break;
                 case 2:
                     break;
@@ -32,9 +34,8 @@ namespace ConsoleApp1
                 default:
                     break;
 
-               //comment 
-
-                //this is haley wassup
+               //comment
+               //new comment just for Eric
             }
 
 }
