@@ -83,6 +83,7 @@ namespace ConsoleApp1
             //get value to search from user
             Console.WriteLine("Enter value to search: ");
             string valueToSearch = Console.ReadLine();
+            Console.WriteLine();
 
             //start a timer
             System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
@@ -94,7 +95,7 @@ namespace ConsoleApp1
                 sw.Stop();
                 
                 //get and display found value
-                Console.WriteLine("Value found. " + valueToSearch);
+                Console.WriteLine("Value found.");
                 Console.WriteLine("Time elapsed: {0}", sw.Elapsed);
             }
             else
@@ -184,6 +185,7 @@ namespace ConsoleApp1
             //get value to search from user
             Console.WriteLine("Enter value to search: ");
             string valueToSearch = Console.ReadLine();
+            Console.WriteLine();
 
             //start a timer
             System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
@@ -195,7 +197,7 @@ namespace ConsoleApp1
                 sw.Stop();
 
                 //get and display found value
-                Console.WriteLine("Value found. " + valueToSearch);
+                Console.WriteLine("Value found.");
                 Console.WriteLine("Time elapsed: {0}", sw.Elapsed);
             }
             else
@@ -270,6 +272,7 @@ namespace ConsoleApp1
             //get key and value to search from user
             Console.WriteLine("Enter key to search: ");
             string keyToSearch = Console.ReadLine();
+            Console.WriteLine();
 
             //start a timer
             System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
@@ -281,7 +284,7 @@ namespace ConsoleApp1
                 sw.Stop();
 
                 //get and display found value
-                Console.WriteLine("Value found. " + keyToSearch);
+                Console.WriteLine("Key found.");
                 Console.WriteLine("Time elapsed: {0}", sw.Elapsed);
             }
             else
@@ -290,7 +293,7 @@ namespace ConsoleApp1
                 sw.Stop();
 
                 //write time elapsed
-                Console.WriteLine("Value not found.");
+                Console.WriteLine("Key not found.");
                 Console.WriteLine("Time Elapsed: {0}", sw.Elapsed);
             }
             Console.WriteLine();
