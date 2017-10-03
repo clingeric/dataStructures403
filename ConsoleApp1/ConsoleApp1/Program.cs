@@ -12,7 +12,7 @@ namespace ConsoleApp1
         //STACK
 
         static Stack<string> myStack = new Stack<string>();
-        
+
         static void addToStack()
         {
             //prompts the user to enter a string and then inserts the input into the data structure.
@@ -27,7 +27,7 @@ namespace ConsoleApp1
             //For example, New Entry 1, New Entry 2, New Entry 3. For the dictionary, the key will be the generated string ("New Entry 2") and the value will be the current number (2).
             myStack.Clear();
             for (int i = 1; i < 2001; i++)
-            { 
+            {
                 myStack.Push("New Entry " + i);
             }
         }
@@ -40,12 +40,34 @@ namespace ConsoleApp1
             }
         }
 
+        static void deleteStack()
+        {
+            Console.WriteLine("Which would you like to delete?");
+            string userInput = Console.ReadLine();
+
+            Stack<string> temp = new Stack<string>();
+
+            while ((myStack.Pop()) != userInput)
+            {
+                temp.Push(myStack.Pop());
+            }
+
+            while (temp.Pop() != null)
+            {
+                myStack.Push(temp.Pop());
+            }
+        }
+
+        static void deleteAllStack()
+        {
+            myStack.Clear();
+        }
 
 
         //QUEUE
 
         static Queue<string> myQueue = new Queue<string>();
-        
+
         static void addToQueue()
         {
             //prompts the user to enter a string and then inserts the input into the data structure.
@@ -74,6 +96,31 @@ namespace ConsoleApp1
 
         }
 
+        static void deleteQueue()
+        {
+            Console.WriteLine("Which would you like to delete?");
+            string userInput = Console.ReadLine();
+            Queue<string> myHoldQueue = new Queue<string>();
+            if (myQueue.Peek() == userInput)
+            {
+                myQueue.Dequeue();
+            }
+            else
+            {
+                myHoldQueue.Enqueue(myQueue.Dequeue());
+            }
+
+
+            for (int iCount = 0; myHoldQueue.Count > 0; iCount++)
+            {
+                myQueue.Enqueue(myHoldQueue.Dequeue());
+                Console.WriteLine(myQueue.ElementAt(iCount));
+            }
+}
+            static void deleteAllQueue()
+            {
+                myQueue.Clear();
+            }
 
 
         //DICTIONARY
@@ -111,7 +158,23 @@ namespace ConsoleApp1
 
         }
 
+        static void deleteDictionary()
+        {
+            Console.WriteLine("Which would you like to delete?");
+            string userInput = Console.ReadLine();
 
+            for (int iCount = 0; iCount < myDictionary.Count; iCount++)
+
+                if (myDictionary.ContainsKey(userInput))
+                {
+                    myDictionary.Remove(userInput);
+                }
+            }
+
+        static void deleteAllDictionary()
+        {
+            myDictionary.Clear();
+        }
 
 
             static void Main(string[] args)
@@ -161,6 +224,7 @@ namespace ConsoleApp1
                             case 4:
                                 break;
                             case 5:
+                                deleteAllStack();
                                 break;
                             case 6:
                                 break;
@@ -200,6 +264,7 @@ namespace ConsoleApp1
                             case 4:
                                 break;
                             case 5:
+                                deleteAllQueue();
                                 break;
                             case 6:
                                 break;
@@ -238,6 +303,7 @@ namespace ConsoleApp1
                             case 4:
                                 break;
                             case 5:
+                                deleteAllDictionary();
                                 break;
                             case 6:
                                 break;
