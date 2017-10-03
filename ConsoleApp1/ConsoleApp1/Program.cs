@@ -39,6 +39,37 @@ namespace ConsoleApp1
                 Console.WriteLine(item);
             }
         }
+        static void deleteFromStack()
+        {
+            //prompts the user to enter an item and then deletes that item from the data structure
+            Console.WriteLine("Which item do you want to delete?");
+            string userInput = Console.ReadLine();
+
+            if (myStack.Contains(userInput))
+            {
+                Stack<string> tempStack = new Stack<string>();
+                while (myStack.Count() > 0)
+                {
+                    if (userInput == myStack.Peek())
+                    {
+                        myStack.Pop();
+                    }
+                    else
+                    {
+                        tempStack.Push(myStack.Pop());
+                    }
+                }
+
+                while (tempStack.Count() > 0)
+                {
+                    myStack.Push(tempStack.Pop());
+                }
+            }
+            else
+            {
+                Console.WriteLine("Stack does not contain " + userInput);
+            }
+        }
 
 
 
@@ -73,7 +104,37 @@ namespace ConsoleApp1
             }
 
         }
+        static void deleteFromQueue()
+        {
+            //prompts the user to enter an item and then deletes that item from the data structure
+            Console.WriteLine("Which item do you want to delete?");
+            string userInput = Console.ReadLine();
 
+            if (myQueue.Contains(userInput))
+            {
+                Queue<string> tempQueue = new Queue<string>();
+                while (myQueue.Count() > 0)
+                {
+                    if (userInput == myQueue.Peek())
+                    {
+                        myQueue.Dequeue();
+                    }
+                    else
+                    {
+                        tempQueue.Enqueue(myQueue.Dequeue());
+                    }
+                }
+
+                while (tempQueue.Count() > 0)
+                {
+                    myQueue.Enqueue(tempQueue.Dequeue());
+                }
+            }
+            else
+            {
+                Console.WriteLine("Queue does not contain " + userInput);
+            }
+        }
 
 
         //DICTIONARY
@@ -110,11 +171,15 @@ namespace ConsoleApp1
             }
 
         }
+        static void deleteFromDictionary()
+        {
+            //prompts the user to enter an item and then deletes that item from the data structure
+            //still a work in progress...
+        }
 
 
 
-
-            static void Main(string[] args)
+        static void Main(string[] args)
         {
             int userInt;
             bool keepGoing = true;
@@ -159,6 +224,7 @@ namespace ConsoleApp1
                                 displayStack();
                                 break;
                             case 4:
+                                deleteFromStack();
                                 break;
                             case 5:
                                 break;
@@ -198,6 +264,7 @@ namespace ConsoleApp1
                                 displayQueue();
                                 break;
                             case 4:
+                                deleteFromQueue();
                                 break;
                             case 5:
                                 break;
@@ -236,6 +303,7 @@ namespace ConsoleApp1
                                 displayDictionary();
                                 break;
                             case 4:
+                                deleteFromDictionary();
                                 break;
                             case 5:
                                 break;
