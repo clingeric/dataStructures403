@@ -1,4 +1,5 @@
-﻿using System;
+﻿//hi
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,7 @@ namespace ConsoleApp1
         //STACK
 
         static Stack<string> myStack = new Stack<string>();
-        
+
         static void addToStack()
         {
             //prompts the user to enter a string and then inserts the input into the data structure.
@@ -27,7 +28,7 @@ namespace ConsoleApp1
             //For example, New Entry 1, New Entry 2, New Entry 3. For the dictionary, the key will be the generated string ("New Entry 2") and the value will be the current number (2).
             myStack.Clear();
             for (int i = 1; i < 2001; i++)
-            { 
+            {
                 myStack.Push("New Entry " + i);
             }
         }
@@ -39,6 +40,7 @@ namespace ConsoleApp1
                 Console.WriteLine(item);
             }
         }
+
         static void deleteFromStack()
         {
             //prompts the user to enter an item and then deletes that item from the data structure
@@ -71,12 +73,16 @@ namespace ConsoleApp1
             }
         }
 
+        static void deleteAllStack()
+        {
+            myStack.Clear();
+        }
 
 
         //QUEUE
 
         static Queue<string> myQueue = new Queue<string>();
-        
+
         static void addToQueue()
         {
             //prompts the user to enter a string and then inserts the input into the data structure.
@@ -104,6 +110,7 @@ namespace ConsoleApp1
             }
 
         }
+
         static void deleteFromQueue()
         {
             //prompts the user to enter an item and then deletes that item from the data structure
@@ -135,6 +142,10 @@ namespace ConsoleApp1
                 Console.WriteLine("Queue does not contain " + userInput);
             }
         }
+        static void deleteAllQueue()
+            {
+                myQueue.Clear();
+            }
 
 
         //DICTIONARY
@@ -171,15 +182,27 @@ namespace ConsoleApp1
             }
 
         }
-        static void deleteFromDictionary()
+
+        static void deleteDictionary()
         {
-            //prompts the user to enter an item and then deletes that item from the data structure
-            //still a work in progress...
+            Console.WriteLine("Which would you like to delete?");
+            string userInput = Console.ReadLine();
+
+            for (int iCount = 0; iCount < myDictionary.Count; iCount++)
+
+                if (myDictionary.ContainsKey(userInput))
+                {
+                    myDictionary.Remove(userInput);
+                }
+            }
+
+        static void deleteAllDictionary()
+        {
+            myDictionary.Clear();
         }
 
 
-
-        static void Main(string[] args)
+            static void Main(string[] args)
         {
             int userInt;
             bool keepGoing = true;
@@ -224,9 +247,9 @@ namespace ConsoleApp1
                                 displayStack();
                                 break;
                             case 4:
-                                deleteFromStack();
                                 break;
                             case 5:
+                                deleteAllStack();
                                 break;
                             case 6:
                                 break;
@@ -267,6 +290,7 @@ namespace ConsoleApp1
                                 deleteFromQueue();
                                 break;
                             case 5:
+                                deleteAllQueue();
                                 break;
                             case 6:
                                 break;
@@ -303,9 +327,10 @@ namespace ConsoleApp1
                                 displayDictionary();
                                 break;
                             case 4:
-                                deleteFromDictionary();
+                                deleteDictionary();
                                 break;
                             case 5:
+                                deleteAllDictionary();
                                 break;
                             case 6:
                                 break;
