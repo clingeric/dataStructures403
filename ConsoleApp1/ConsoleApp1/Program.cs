@@ -247,6 +247,7 @@ namespace ConsoleApp1
                                 displayStack();
                                 break;
                             case 4:
+                                deleteFromStack();
                                 break;
                             case 5:
                                 deleteAllStack();
