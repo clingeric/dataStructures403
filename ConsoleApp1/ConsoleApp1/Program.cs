@@ -8,7 +8,7 @@ namespace ConsoleApp1
 {
     class Program
     {
-
+        //comment
         //STACK
 
         static Stack<string> myStack = new Stack<string>();
@@ -159,7 +159,7 @@ namespace ConsoleApp1
             Console.WriteLine("Enter a int value");
             string userIntString = Console.ReadLine();
             int userInt = Convert.ToInt32(userIntString);
-            myDictionary.Add(userInput, userInt); //is this right?
+            myDictionary.Add(userInput, userInt); //do we need to check for multiple key values?
         }
         static void addHugeToDictionary()
         {
