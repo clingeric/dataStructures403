@@ -77,6 +77,41 @@ namespace ConsoleApp1
             myStack.Clear();
         }
 
+        static void searchStack()
+        {
+            //allows user to search for item in the stack
+            //get value to search from user
+            Console.WriteLine("Enter value to search: ");
+            string valueToDelete = Console.ReadLine();
+
+            //start a timer
+            System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
+            sw.Start();
+
+            if (myStack.Contains(valueToDelete))
+            {
+                //user input found in stack - stop timer
+                sw.Stop();
+                TimeSpan ts = sw.Elapsed;
+
+                //get and display found value
+                Console.WriteLine("Value found.");
+
+
+                // Format and display the TimeSpan value.
+                string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
+                    ts.Hours, ts.Minutes, ts.Seconds,
+                    ts.Milliseconds / 10);
+                Console.WriteLine("Elapsed Time: " + elapsedTime);
+            }
+            else
+            {
+                //user input not found in stack - stop timer
+                sw.Stop();
+            }
+
+        }
+
 
         //QUEUE
 
