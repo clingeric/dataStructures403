@@ -82,34 +82,31 @@ namespace ConsoleApp1
             //allows user to search for item in the stack
             //get value to search from user
             Console.WriteLine("Enter value to search: ");
-            string valueToDelete = Console.ReadLine();
+            string valueToSearch = Console.ReadLine();
 
             //start a timer
             System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
             sw.Start();
 
-            if (myStack.Contains(valueToDelete))
+            if (myStack.Contains(valueToSearch))
             {
                 //user input found in stack - stop timer
                 sw.Stop();
-                TimeSpan ts = sw.Elapsed;
-
+                
                 //get and display found value
-                Console.WriteLine("Value found.");
-
-
-                // Format and display the TimeSpan value.
-                string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
-                    ts.Hours, ts.Minutes, ts.Seconds,
-                    ts.Milliseconds / 10);
-                Console.WriteLine("Elapsed Time: " + elapsedTime);
+                Console.WriteLine("Value found. " + valueToSearch);
+                Console.WriteLine("Time elapsed: {0}", sw.Elapsed);
             }
             else
             {
                 //user input not found in stack - stop timer
                 sw.Stop();
-            }
 
+                //write time elapsed
+                Console.WriteLine("Value not found.");
+                Console.WriteLine("Time Elapsed: {0}", sw.Elapsed);
+            }
+            Console.WriteLine();
         }
 
 
@@ -181,6 +178,38 @@ namespace ConsoleApp1
                 myQueue.Clear();
             }
 
+        static void searchQueue()
+        {
+            //allows user to search for item in the queue
+            //get value to search from user
+            Console.WriteLine("Enter value to search: ");
+            string valueToSearch = Console.ReadLine();
+
+            //start a timer
+            System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
+            sw.Start();
+
+            if (myQueue.Contains(valueToSearch))
+            {
+                //user input found in queue - stop timer
+                sw.Stop();
+
+                //get and display found value
+                Console.WriteLine("Value found. " + valueToSearch);
+                Console.WriteLine("Time elapsed: {0}", sw.Elapsed);
+            }
+            else
+            {
+                //user input not found in queue - stop timer
+                sw.Stop();
+
+                //write time elapsed
+                Console.WriteLine("Value not found.");
+                Console.WriteLine("Time Elapsed: {0}", sw.Elapsed);
+            }
+            Console.WriteLine();
+        }
+
 
         //DICTIONARY
 
@@ -235,8 +264,40 @@ namespace ConsoleApp1
             myDictionary.Clear();
         }
 
+        static void searchDictionary()
+        {
+            //allows user to search for item in the dictionary
+            //get key and value to search from user
+            Console.WriteLine("Enter key to search: ");
+            string keyToSearch = Console.ReadLine();
 
-            static void Main(string[] args)
+            //start a timer
+            System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
+            sw.Start();
+
+            if (myDictionary.ContainsKey(keyToSearch))
+            {
+                //user input found in dictionary - stop timer
+                sw.Stop();
+
+                //get and display found value
+                Console.WriteLine("Value found. " + keyToSearch);
+                Console.WriteLine("Time elapsed: {0}", sw.Elapsed);
+            }
+            else
+            {
+                //user input not found in dictionary - stop timer
+                sw.Stop();
+
+                //write time elapsed
+                Console.WriteLine("Value not found.");
+                Console.WriteLine("Time Elapsed: {0}", sw.Elapsed);
+            }
+            Console.WriteLine();
+        }
+
+
+        static void Main(string[] args)
         {
             int userInt;
             bool keepGoing = true;
@@ -287,6 +348,7 @@ namespace ConsoleApp1
                                 deleteAllStack();
                                 break;
                             case 6:
+                                searchStack();
                                 break;
                             case 7:
                                 break;
@@ -328,6 +390,7 @@ namespace ConsoleApp1
                                 deleteAllQueue();
                                 break;
                             case 6:
+                                searchQueue();
                                 break;
                             case 7:
                                 break;
@@ -368,6 +431,7 @@ namespace ConsoleApp1
                                 deleteAllDictionary();
                                 break;
                             case 6:
+                                searchDictionary();
                                 break;
                             case 7:
                                 break;
