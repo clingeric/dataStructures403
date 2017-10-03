@@ -222,6 +222,7 @@ namespace ConsoleApp1
                                 displayStack();
                                 break;
                             case 4:
+                                deleteStack();
                                 break;
                             case 5:
                                 deleteAllStack();
@@ -262,6 +263,7 @@ namespace ConsoleApp1
                                 displayQueue();
                                 break;
                             case 4:
+                                deleteQueue();
                                 break;
                             case 5:
                                 deleteAllQueue();
@@ -301,6 +303,7 @@ namespace ConsoleApp1
                                 displayDictionary();
                                 break;
                             case 4:
+                                deleteDictionary();
                                 break;
                             case 5:
                                 deleteAllDictionary();
