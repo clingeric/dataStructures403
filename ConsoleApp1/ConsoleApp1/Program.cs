@@ -1,5 +1,4 @@
-﻿//hi
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -247,6 +246,7 @@ namespace ConsoleApp1
                                 displayStack();
                                 break;
                             case 4:
+                                deleteFromStack();
                                 break;
                             case 5:
                                 deleteAllStack();
