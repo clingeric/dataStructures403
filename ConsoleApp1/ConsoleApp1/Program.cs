@@ -1,4 +1,9 @@
-﻿using System;
+﻿/* Alison Eves, Haley Kirk, Eric Clinger, Tyler Bradshaw
+ * This is a program that demonstrates the use of a Stack, Queue, and Dictionary.
+ * We used GitHub for this assignment.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
