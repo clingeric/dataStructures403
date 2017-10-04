@@ -259,7 +259,12 @@ namespace ConsoleApp1
                 {
                     myDictionary.Remove(userInput);
                 }
-            }
+
+                else
+                {
+                    Console.WriteLine("Dictionary does not contain " + userInput);
+                }
+        }
 
         static void deleteAllDictionary()
         {
