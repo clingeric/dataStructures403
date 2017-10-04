@@ -74,7 +74,7 @@ namespace ConsoleApp1
             }
         }
 
-        static void deleteAllStack()
+        static void deleteAllStack() //deletes all items from stack
         {
             myStack.Clear();
         }
@@ -178,7 +178,7 @@ namespace ConsoleApp1
                 Console.WriteLine("Queue does not contain " + userInput);
             }
         }
-        static void deleteAllQueue()
+        static void deleteAllQueue() //deletes all items from queue
             {
                 myQueue.Clear();
             }
@@ -257,11 +257,11 @@ namespace ConsoleApp1
             Console.WriteLine("Which would you like to delete?");
             string userInput = Console.ReadLine();
 
-            for (int iCount = 0; iCount < myDictionary.Count; iCount++)
+            for (int iCount = 0; iCount < myDictionary.Count; iCount++) //sorts through all entries in the dictionary
 
                 if (myDictionary.ContainsKey(userInput))
                 {
-                    myDictionary.Remove(userInput);
+                    myDictionary.Remove(userInput); //removes the entry that matches the user input
                 }
 
                 else
@@ -270,7 +270,7 @@ namespace ConsoleApp1
                 }
         }
 
-        static void deleteAllDictionary()
+        static void deleteAllDictionary() //deletes all items from dictionary
         {
             myDictionary.Clear();
         }
