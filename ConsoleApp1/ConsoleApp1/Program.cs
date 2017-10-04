@@ -32,7 +32,7 @@ namespace ConsoleApp1
         }
         static void displayStack()
         {
-            //display the contents of the data structure. You must use the foreach loop when displaying the data. Handle any errors and inform the user.
+            //displays the contents of the data structure. 
             foreach (string item in myStack)
             {
                 Console.WriteLine(item);
@@ -135,7 +135,7 @@ namespace ConsoleApp1
         }
         static void displayQueue()
         {
-            //display the contents of the data structure.You must use the foreach loop when displaying the data. Handle any errors and inform the user.
+            //display the contents of the data structure.
             foreach (string item in myQueue)
             {
                 Console.WriteLine(item);
@@ -240,7 +240,7 @@ namespace ConsoleApp1
         }
         static void displayDictionary()
         {
-            //display the contents of the data structure. You must use the foreach loop when displaying the data. Handle any errors and inform the user.
+            //display the contents of the data structure.
             foreach (KeyValuePair<string, int> item in myDictionary)
             {
                 Console.WriteLine("Key: " + item.Key + " Value: " + item.Value);
