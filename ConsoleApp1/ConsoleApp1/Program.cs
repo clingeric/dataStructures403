@@ -42,12 +42,14 @@ namespace ConsoleApp1
 
         static void deleteFromStack()
         {
-            //prompts the user to enter an item and then deletes that item from the data structure
+            //prompts the user to enter an item
             Console.WriteLine("Which item do you want to delete?");
             string userInput = Console.ReadLine();
 
+            //checks if stack contains the user input
             if (myStack.Contains(userInput))
             {
+                //if stack contains the user input, then delete it from the stack
                 Stack<string> tempStack = new Stack<string>();
                 while (myStack.Count() > 0)
                 {
@@ -145,12 +147,14 @@ namespace ConsoleApp1
 
         static void deleteFromQueue()
         {
-            //prompts the user to enter an item and then deletes that item from the data structure
+            //prompts the user to enter an item
             Console.WriteLine("Which item do you want to delete?");
             string userInput = Console.ReadLine();
 
+            //checks if the queue contains the user input
             if (myQueue.Contains(userInput))
             {
+                //deletes the user input from the queue
                 Queue<string> tempQueue = new Queue<string>();
                 while (myQueue.Count() > 0)
                 {
