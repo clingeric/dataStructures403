@@ -8,7 +8,6 @@ namespace ConsoleApp1
 {
     class Program
     {
-        //comment
         //STACK
 
         static Stack<string> myStack = new Stack<string>();
@@ -33,11 +32,12 @@ namespace ConsoleApp1
         }
         static void displayStack()
         {
-            //display the contents of the data structure.You must use the foreach loop when displaying the data. Handle any errors and inform the user.
+            //display the contents of the data structure. You must use the foreach loop when displaying the data. Handle any errors and inform the user.
             foreach (string item in myStack)
             {
                 Console.WriteLine(item);
             }
+            Console.WriteLine();
         }
 
         static void deleteFromStack()
@@ -140,7 +140,7 @@ namespace ConsoleApp1
             {
                 Console.WriteLine(item);
             }
-
+            Console.WriteLine();
         }
 
         static void deleteFromQueue()
@@ -245,7 +245,7 @@ namespace ConsoleApp1
             {
                 Console.WriteLine("Key: " + item.Key + " Value: " + item.Value);
             }
-
+            Console.WriteLine();
         }
 
         static void deleteDictionary()
@@ -316,7 +316,7 @@ namespace ConsoleApp1
                     Console.WriteLine();
                 }
                 while (!int.TryParse(Console.ReadLine(), out userInt));
-
+                Console.WriteLine();
                 switch (userInt)
                 {
                     case 1:
@@ -332,7 +332,7 @@ namespace ConsoleApp1
                             Console.WriteLine();
                         }
                         while (!int.TryParse(Console.ReadLine(), out userInt));
-
+                        Console.WriteLine();
                         switch (userInt)
                         {
                             case 1:
@@ -374,7 +374,7 @@ namespace ConsoleApp1
                             Console.WriteLine();
                         }
                         while (!int.TryParse(Console.ReadLine(), out userInt));
-
+                        Console.WriteLine();
                         switch (userInt)
                         {
                             case 1:
@@ -415,7 +415,7 @@ namespace ConsoleApp1
                             Console.WriteLine();
                         }
                         while (!int.TryParse(Console.ReadLine(), out userInt));
-
+                        Console.WriteLine();
                         switch (userInt)
                         {
                             case 1:
